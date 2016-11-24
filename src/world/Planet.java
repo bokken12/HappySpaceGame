@@ -1,6 +1,7 @@
 package world;
 
 import java.awt.Point;
+import java.util.ArrayList;
 
 public class Planet {
 
@@ -9,4 +10,9 @@ public class Planet {
 	Species inhabitant;
 	int defenseLevel;
 	int productionLevel;
+	ArrayList<Item> treasury;
+	
+	public Planet() {
+		
+	}
 }
