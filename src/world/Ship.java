@@ -6,8 +6,13 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 public class Ship {
+<<<<<<< HEAD
 
 	public Point location;
+=======
+	
+	Point Location;
+>>>>>>> origin/master
 	ArrayList<Item> hold;
 	int money;
 	int speed;

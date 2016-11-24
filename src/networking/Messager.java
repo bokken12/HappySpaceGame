@@ -48,7 +48,7 @@ public class Messager extends Thread {
 				if(o instanceof Message) {
 					listener.messageRecieved((Message) o);
 				} else {
-					(new notAMessageException()).printStackTrace();
+					(new NotAMessageException()).printStackTrace();
 					listener.close();
 					running = false;
 				}

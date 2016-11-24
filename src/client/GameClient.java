@@ -5,7 +5,6 @@ import javax.swing.JFrame;
 import world.Planet;
 
 public class GameClient {
-
 	
 	MapDisplay mapDisplay;
 	Input input;

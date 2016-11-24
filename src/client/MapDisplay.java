@@ -10,7 +10,7 @@ import world.Planet;
 import world.Ship;
 
 public class MapDisplay extends JPanel {
-
+	
 	Map myWorld;
 	Point cameraPosition = new Point(0, 0);
 	
