@@ -20,7 +20,6 @@ public class GameClient extends JFrame implements MessageListener {
 		mapDisplay.myWorld = PlanetGenerator.generateWorld(20);
 		input = new Input(this);
 		add(mapDisplay);
-		setSize(500, 400);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 		requestFocus();
@@ -29,6 +28,7 @@ public class GameClient extends JFrame implements MessageListener {
 		setBackground(Color.BLACK);
 		addKeyListener(input);
 		addMouseListener(input);
+		setSize(500, 400);
 	}
 	
 	public void update() {
