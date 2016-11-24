@@ -7,7 +7,7 @@ package client;
  * @author joelmanning
  *
  */
-public class Launcher
+public class Launcher 
 {
 
 }
