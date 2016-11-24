@@ -26,7 +26,7 @@ public class MapDisplay extends JPanel {
 		}
 		
 		for(Ship s : myWorld.ships) {
-			Point pos = convertPointToScreen(s.location);
+			Point pos = convertPointToScreen(s.getLocation());
 			g.drawImage(s.image.getImage(), pos.x, pos.y, this);
 		}
 	}
