@@ -26,4 +26,9 @@ public class PlanetGenerator {
 		
 		return p;
 	}
+	
+	public static World generateWorld(int size) {
+		return null;
+		
+	}
 }
