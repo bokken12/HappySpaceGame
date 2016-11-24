@@ -1,5 +1,6 @@
 package world;
 
+import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class PlanetGenerator {
 		planetImages.add(new ImageIcon("p5"));
 	}
 
-	public static Planet newPlanet() {
+	/*public static Planet newPlanet() {
 		
 		Planet p = new Planet();
 		p.setName("New Meegledom");
@@ -25,10 +26,13 @@ public class PlanetGenerator {
 		p.setImage(planetImages.get((int) Math.random()*planetImages.size()));
 		
 		return p;
-	}
+	}*/
 	
 	public static World generateWorld(int size) {
-		return null;
-		
+		World w = new World();
+		for(int i = 0; i < size; i++){
+			w.getPlanets().add(new Planet(new Point((int)(Math.random() * 2 * size - size), (int)(Math.random() * 2 * size - size)), "New Meegledom", null));
+		}
+		return w;
 	}
 }

@@ -16,9 +16,40 @@ public class Planet {
 	private List<Item> treasury = new ArrayList<Item>();
 	private ImageIcon image = new ImageIcon("p2.png");
 	
-	public Planet() {
-		
+	
+	/**
+	 * @param location
+	 * @param name
+	 * @param inhabitant
+	 * @param defenseLevel
+	 * @param productionLevel
+	 * @param treasury
+	 * @param image
+	 */
+	public Planet(Point location, String name, Species inhabitant,
+			int defenseLevel, int productionLevel, List<Item> treasury,
+			ImageIcon image) {
+		super();
+		this.location = location;
+		this.name = name;
+		this.inhabitant = inhabitant;
+		this.defenseLevel = defenseLevel;
+		this.productionLevel = productionLevel;
+		this.treasury = treasury;
+		this.image = image;
 	}
+	
+	public Planet(Point location, String name, Species inhabitant) {
+		super();
+		this.location = location;
+		this.name = name;
+		this.inhabitant = inhabitant;
+		this.defenseLevel = 5;
+		this.productionLevel = 1;
+		this.treasury = new ArrayList<Item>();
+		this.image = new ImageIcon("p" + (int)(Math.random() * 5 + 1) + ".png");
+	}
+
 	/**
 	 * @return the location
 	 */
