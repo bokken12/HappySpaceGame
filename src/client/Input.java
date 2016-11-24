@@ -7,16 +7,33 @@ import java.awt.event.MouseListener;
 
 public class Input implements MouseListener, KeyListener {
 
+	GameClient game;
+	
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
+		moveCamera(e);
 		
+	}
+	
+	public void moveCamera(KeyEvent e) {
+		if(e.getKeyCode() == KeyEvent.VK_LEFT) {
+			game.mapDisplay.cameraPosition.x += 1;
+		}
+		if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+			game.mapDisplay.cameraPosition.x -= 1;
+		}
+		if(e.getKeyCode() == KeyEvent.VK_UP) {
+			game.mapDisplay.cameraPosition.y += 1;
+		}
+		if(e.getKeyCode() == KeyEvent.VK_DOWN) {
+			game.mapDisplay.cameraPosition.y -= 1;
+		}
 	}
 
 	@Override
