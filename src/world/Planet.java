@@ -10,10 +10,10 @@ public class Planet {
 	public Point location;
 	String name;
 	Species inhabitant;
-	int defenseLevel;
-	int productionLevel;
-	ArrayList<Item> treasury;
-	public ImageIcon image;
+	int defenseLevel = 5;
+	int productionLevel = 1;
+	ArrayList<Item> treasury = new ArrayList<Item>();
+	public ImageIcon image = new ImageIcon("p2.png");
 	
 	public Planet() {
 		

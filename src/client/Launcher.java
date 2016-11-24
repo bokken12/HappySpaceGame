@@ -11,11 +11,11 @@ public class Launcher
 {
 
 	public static void main(String[] args) {
-		
+		goToGame();
 		
 	}
 	
-	public void goToGame() {
+	public static void goToGame() {
 		GameClient g = new GameClient();
 	}
 }
