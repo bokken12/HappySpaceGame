@@ -6,6 +6,8 @@ package server;
 import java.io.IOException;
 import java.net.ServerSocket;
 
+import world.World;
+
 /**
  * @author joelmanning
  *
@@ -16,6 +18,8 @@ public class Server {
 	private static Server server;
 	
 	private ServerSocket s;
+	
+	private World world;
 	
 	public Server() {
 		try {
