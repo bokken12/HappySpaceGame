@@ -10,7 +10,7 @@ import java.net.Socket;
  *
  */
 public class Handler {
-	public Handler(Socket s){
+	public Handler(Socket s) {
 		
 	}
 }

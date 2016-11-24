@@ -25,7 +25,7 @@ public class Server {
 	}
 	
 	public void run() {
-		while(true){
+		while(true) {
 			try {
 				new Handler(s.accept());
 			} catch(IOException e) {

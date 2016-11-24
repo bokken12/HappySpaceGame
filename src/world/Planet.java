@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 public class Planet {
-
+	
 	public Point location;
 	String name;
 	Species inhabitant;

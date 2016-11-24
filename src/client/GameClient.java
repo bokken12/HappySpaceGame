@@ -1,7 +1,6 @@
 package client;
 
 public class GameClient {
-
 	
 	MapDisplay mapDisplay;
 	Input input;

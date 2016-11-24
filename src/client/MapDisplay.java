@@ -9,7 +9,7 @@ import world.Map;
 import world.Planet;
 
 public class MapDisplay extends JPanel {
-
+	
 	Map myWorld;
 	Point cameraPosition;
 	

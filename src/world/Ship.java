@@ -4,7 +4,7 @@ import java.awt.Point;
 import java.util.ArrayList;
 
 public class Ship {
-
+	
 	Point Location;
 	ArrayList<Item> hold;
 	int money;
