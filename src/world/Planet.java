@@ -55,7 +55,7 @@ public class Planet {
 		this.size = size;
 		this.treasury = new ArrayList<Item>();
 		try {
-			this.image = new ImageIcon(ImageIO.read(new File("p" + (int)(Math.random() * 4 + 1) + ".png")).getScaledInstance(size, size, Image.SCALE_DEFAULT));
+			this.image = new ImageIcon(ImageIO.read(new File("p" + (int)(Math.random() * 4 + 1) + ".png")).getScaledInstance(size, size, Image.SCALE_SMOOTH));
 		} catch(IOException e) {
 			e.printStackTrace();
 		}

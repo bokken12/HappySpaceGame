@@ -1,6 +1,7 @@
 package client;
 
 import java.awt.Color;
+import java.awt.Dimension;
 
 import javax.swing.JFrame;
 
@@ -22,7 +23,7 @@ public class GameClient implements MessageListener {
 		mapDisplay.myWorld = PlanetGenerator.generateWorld(20);
 		input = new Input(this);
 		frame.add(mapDisplay);
-		frame.setSize(500, 400);
+		frame.setPreferredSize(new Dimension(400, 400));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		frame.requestFocus();
