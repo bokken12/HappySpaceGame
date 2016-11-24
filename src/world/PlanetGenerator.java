@@ -8,13 +8,20 @@ public class PlanetGenerator {
 	
 	static ArrayList<ImageIcon> planetImages = new ArrayList<ImageIcon>();
 	
+	static void init() {
+		planetImages.add(new ImageIcon("p1"));
+		planetImages.add(new ImageIcon("p2"));
+		planetImages.add(new ImageIcon("p3"));
+		planetImages.add(new ImageIcon("p4"));
+		planetImages.add(new ImageIcon("p5"));
+	}
 
 	public static Planet newPlanet() {
 		
 		Planet p = new Planet();
 		p.setName("New Meegledom");
-		p.productionLevel = (int) Math.random()*3;
-		p.image = planetImages.get((int) Math.random()*planetImages.size());
+		p.setProductionLevel((int) Math.random()*3);
+		p.setImage(planetImages.get((int) Math.random()*planetImages.size()));
 		
 		return p;
 	}

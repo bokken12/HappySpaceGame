@@ -2,12 +2,23 @@ package world;
 
 import java.awt.Point;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.ImageIcon;
 
 public class Planet {
 	
-	public Point location;
+	private Point location;
+	private String name;
+	private Species inhabitant;
+	private int defenseLevel = 5;
+	private int productionLevel = 1;
+	private List<Item> treasury = new ArrayList<Item>();
+	private ImageIcon image = new ImageIcon("p2.png");
+	
+	public Planet() {
+		
+	}
 	/**
 	 * @return the location
 	 */
@@ -81,7 +92,7 @@ public class Planet {
 	/**
 	 * @return the treasury
 	 */
-	public ArrayList<Item> getTreasury() {
+	public List<Item> getTreasury() {
 		return treasury;
 	}
 
@@ -104,16 +115,5 @@ public class Planet {
 	 */
 	public void setImage(ImageIcon image) {
 		this.image = image;
-	}
-
-	String name;
-	Species inhabitant;
-	int defenseLevel = 5;
-	int productionLevel = 1;
-	ArrayList<Item> treasury = new ArrayList<Item>();
-	public ImageIcon image = new ImageIcon("p2.png");
-	
-	public Planet() {
-		
 	}
 }
