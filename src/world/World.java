@@ -8,6 +8,7 @@ public class World {
 	private List<Planet> planets;
 	private List<Ship> ships;
 	private List<Ship> species;
+	
 	public World() {
 		
 	}
