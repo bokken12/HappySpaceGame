@@ -1,5 +1,7 @@
 package client;
 
+import java.awt.Color;
+
 import javax.swing.JFrame;
 
 import networking.Message;
@@ -16,9 +18,9 @@ public class GameClient implements MessageListener {
 	
 	public GameClient() {
 		frame = new JFrame();
-		mapDisplay = new MapDisplay();
+		mapDisplay = new MapDisplay(this);
 		mapDisplay.myWorld = PlanetGenerator.generateWorld(20);
-		input = new Input();
+		input = new Input(this);
 		frame.add(mapDisplay);
 		frame.setSize(500, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,6 +28,7 @@ public class GameClient implements MessageListener {
 		frame.requestFocus();
 		frame.pack();
 		frame.repaint();
+	
 		frame.addKeyListener(input);
 		frame.addMouseListener(input);
 	}

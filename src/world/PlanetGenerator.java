@@ -12,7 +12,7 @@ public class PlanetGenerator {
 	static List<ImageIcon> planetImages = new ArrayList<ImageIcon>();
 	
 	static void init() {
-		for(int i = 1; i < 6; i++) {
+		for(int i = 1; i < 5; i++) {
 			planetImages.add(scaledImage("p" + i));
 		}
 	}
@@ -36,7 +36,7 @@ public class PlanetGenerator {
 	public static World generateWorld(int size) {
 		World w = new World();
 		for(int i = 0; i < size; i++){
-			w.getPlanets().add(new Planet(new Point((int)(Math.random() * 20 * size - size), (int)(Math.random() * 20 * size - size)), "New Meegledom", null, 5, 1, 10));
+			w.getPlanets().add(new Planet(new Point((int)(Math.random() * 20 * size - size), (int)(Math.random() * 20 * size - size)), "New Meegledom", null, 5, 1, 30));
 		}
 		return w;
 	}
