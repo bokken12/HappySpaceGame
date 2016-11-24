@@ -3,8 +3,7 @@
  */
 package messages;
 
-import java.util.Map;
-
+import world.World;
 import networking.Message;
 
 /**
@@ -18,5 +17,5 @@ public abstract class WorldUpdateMessage extends Message {
 	 */
 	private static final long serialVersionUID = -6345536710452642418L;
 	
-	public abstract void update(Map w);
+	public abstract void update(World w);
 }
