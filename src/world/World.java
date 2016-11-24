@@ -1,18 +1,20 @@
 package world;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Map {
+public class World {
 	
-	private ArrayList<Planet> planets;
-	private ArrayList<Ship> ships;
-	public Map() {
+	private List<Planet> planets;
+	private List<Ship> ships;
+	private List<Ship> species;
+	public World() {
 		
 	}
 	/**
 	 * @return the planets
 	 */
-	public ArrayList<Planet> getPlanets() {
+	public List<Planet> getPlanets() {
 		return planets;
 	}
 	/**
@@ -24,7 +26,7 @@ public class Map {
 	/**
 	 * @return the ships
 	 */
-	public ArrayList<Ship> getShips() {
+	public List<Ship> getShips() {
 		return ships;
 	}
 	/**

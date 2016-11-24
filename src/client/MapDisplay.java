@@ -5,13 +5,13 @@ import java.awt.Point;
 
 import javax.swing.JPanel;
 
-import world.Map;
+import world.World;
 import world.Planet;
 import world.Ship;
 
 public class MapDisplay extends JPanel {
 	
-	Map myWorld;
+	World myWorld;
 	Point cameraPosition = new Point(0, 0);
 	
 	public MapDisplay() {
