@@ -35,7 +35,7 @@ public class Input implements MouseListener, KeyListener {
 		} else {
 			return;
 		}
-		game.frame.repaint();
+		game.repaint();
 	}
 	
 	@Override
