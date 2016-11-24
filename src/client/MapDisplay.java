@@ -37,4 +37,9 @@ public class MapDisplay extends JPanel {
 		p.y -= cameraPosition.y;
 		return p;
 	}
+	
+	public Object getClick() {
+		return null;
+	}
+	
 }

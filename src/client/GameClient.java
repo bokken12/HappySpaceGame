@@ -26,6 +26,8 @@ public class GameClient implements MessageListener {
 		frame.requestFocus();
 		frame.pack();
 		frame.repaint();
+		frame.addKeyListener(input);
+		frame.addMouseListener(input);
 	}
 	
 	public void update() {
