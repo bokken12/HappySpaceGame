@@ -10,28 +10,27 @@ import networking.MessageListener;
 import world.Planet;
 import world.PlanetGenerator;
 
-public class GameClient implements MessageListener {
+public class GameClient extends JFrame implements MessageListener {
 	
 	MapDisplay mapDisplay;
 	Input input;
-	JFrame frame;
 	
 	
 	public GameClient() {
-		frame = new JFrame();
 		mapDisplay = new MapDisplay();
 		mapDisplay.myWorld = PlanetGenerator.generateWorld(20);
 		input = new Input(this);
-		frame.add(mapDisplay);
-		frame.setPreferredSize(new Dimension(400, 400));
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setVisible(true);
-		frame.requestFocus();
-		frame.pack();
-		frame.repaint();
-		frame.setBackground(Color.BLACK);
-		frame.addKeyListener(input);
-		frame.addMouseListener(input);
+		
+		add(mapDisplay);
+		setPreferredSize(new Dimension(400, 400));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		requestFocus();
+		pack();
+		repaint();
+		setBackground(Color.BLACK);
+		addKeyListener(input);
+		addMouseListener(input);
 	}
 	
 	public void update() {
@@ -39,8 +38,8 @@ public class GameClient implements MessageListener {
 	}
 	
 	public void displayPlanetScreen(Planet p) {
-		frame.remove(mapDisplay);
-		frame.add(new PlanetDisplay(p));
+		remove(mapDisplay);
+		add(new PlanetDisplay(p));
 		
 	}
 
