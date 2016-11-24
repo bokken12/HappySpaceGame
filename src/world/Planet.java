@@ -1,9 +1,13 @@
 package world;
 
+import java.awt.Image;
 import java.awt.Point;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 public class Planet {
@@ -15,6 +19,7 @@ public class Planet {
 	private int productionLevel = 1;
 	private List<Item> treasury = new ArrayList<Item>();
 	private ImageIcon image = new ImageIcon("p2.png");
+	private int size;
 	
 	
 	/**
@@ -28,7 +33,7 @@ public class Planet {
 	 */
 	public Planet(Point location, String name, Species inhabitant,
 			int defenseLevel, int productionLevel, List<Item> treasury,
-			ImageIcon image) {
+			ImageIcon image, int size) {
 		super();
 		this.location = location;
 		this.name = name;
@@ -37,17 +42,23 @@ public class Planet {
 		this.productionLevel = productionLevel;
 		this.treasury = treasury;
 		this.image = image;
+		this.size = size;
 	}
 	
-	public Planet(Point location, String name, Species inhabitant) {
+	public Planet(Point location, String name, Species inhabitant, int defenseLevel, int productionLevel, int size) {
 		super();
 		this.location = location;
 		this.name = name;
 		this.inhabitant = inhabitant;
-		this.defenseLevel = 5;
-		this.productionLevel = 1;
+		this.defenseLevel = defenseLevel;
+		this.productionLevel = productionLevel;
+		this.size = size;
 		this.treasury = new ArrayList<Item>();
-		this.image = new ImageIcon("p" + (int)(Math.random() * 5 + 1) + ".png");
+		try {
+			this.image = new ImageIcon(ImageIO.read(new File("p" + (int)(Math.random() * 5 + 1) + ".png")).getScaledInstance(size, size, Image.SCALE_DEFAULT));
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
