@@ -14,16 +14,13 @@ public class MapDisplay extends JPanel {
 	
 	World myWorld;
 	Point cameraPosition;
-	GameClient game;
 	
-	public MapDisplay(GameClient game) {
+	public MapDisplay() {
 		cameraPosition = new Point(0, 0);
-		this.game = game;
 	}
 	
 	@Override
 	public void paintComponent(Graphics g) {
-		game.frame.setBackground(Color.BLACK);
 		for(Planet p : myWorld.getPlanets()) {
 			Point pos = convertPointToScreen(p.getLocation());
 			g.drawImage(p.getImage().getImage(), pos.x, pos.y, this);

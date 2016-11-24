@@ -18,7 +18,7 @@ public class GameClient implements MessageListener {
 	
 	public GameClient() {
 		frame = new JFrame();
-		mapDisplay = new MapDisplay(this);
+		mapDisplay = new MapDisplay();
 		mapDisplay.myWorld = PlanetGenerator.generateWorld(20);
 		input = new Input(this);
 		frame.add(mapDisplay);
@@ -28,7 +28,7 @@ public class GameClient implements MessageListener {
 		frame.requestFocus();
 		frame.pack();
 		frame.repaint();
-	
+		frame.setBackground(Color.BLACK);
 		frame.addKeyListener(input);
 		frame.addMouseListener(input);
 	}

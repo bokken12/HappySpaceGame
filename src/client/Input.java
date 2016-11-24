@@ -25,18 +25,17 @@ public class Input implements MouseListener, KeyListener {
 	
 	public void moveCamera(KeyEvent e) {
 		if(e.getKeyCode() == KeyEvent.VK_LEFT) {
-			game.mapDisplay.cameraPosition.x -= 1;
+			game.mapDisplay.cameraPosition.x -= 2;
+		} else if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+			game.mapDisplay.cameraPosition.x += 2;
+		} else if(e.getKeyCode() == KeyEvent.VK_UP) {
+			game.mapDisplay.cameraPosition.y -= 2;
+		} else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
+			game.mapDisplay.cameraPosition.y += 2;
+		} else {
+			return;
 		}
-		else if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
-			game.mapDisplay.cameraPosition.x += 1;
-		}
-		else if(e.getKeyCode() == KeyEvent.VK_UP) {
-			game.mapDisplay.cameraPosition.y += 1;
-		}
-		else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
-			game.mapDisplay.cameraPosition.y -= 1;
-		}
-		game.mapDisplay.repaint();
+		game.frame.repaint();
 	}
 	
 	@Override
