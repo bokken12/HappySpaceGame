@@ -1,5 +1,6 @@
 package world;
 
+import java.awt.Image;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,11 +12,15 @@ public class PlanetGenerator {
 	static List<ImageIcon> planetImages = new ArrayList<ImageIcon>();
 	
 	static void init() {
-		planetImages.add(new ImageIcon("p1"));
-		planetImages.add(new ImageIcon("p2"));
-		planetImages.add(new ImageIcon("p3"));
-		planetImages.add(new ImageIcon("p4"));
-		planetImages.add(new ImageIcon("p5"));
+		for(int i = 1; i < 6; i++) {
+			planetImages.add(scaledImage("p" + i));
+		}
+	}
+	
+	private static ImageIcon scaledImage(String name) {
+		ImageIcon i = new ImageIcon("p5");
+		i.setImage(i.getImage().getScaledInstance((int) 50, 50, Image.SCALE_DEFAULT));
+		return i;
 	}
 
 	/*public static Planet newPlanet() {
