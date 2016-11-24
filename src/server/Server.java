@@ -13,6 +13,8 @@ import java.net.ServerSocket;
 public class Server {
 	public static final int PORT = 9000;
 	
+	private static Server server;
+	
 	private ServerSocket s;
 	
 	public Server() {
@@ -35,6 +37,11 @@ public class Server {
 	}
 	
 	public static void main(String[] args) {
-		(new Server()).run();
+		server = new Server();
+		server.run();
+	}
+	
+	public static Server getServer(){
+		return server;
 	}
 }

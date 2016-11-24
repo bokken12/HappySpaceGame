@@ -1,12 +1,13 @@
 package world;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Species {
 	
-	ArrayList<Planet> ownedPlanets;
-	String name;
-	ArrayList<Ship> ships;
+	private List<Planet> ownedPlanets;
+	private String name;
+	private List<Ship> ships;
 	
 	public Species() {
 		
