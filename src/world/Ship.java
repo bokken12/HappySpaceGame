@@ -7,13 +7,13 @@ import javax.swing.ImageIcon;
 
 public class Ship {
 
-	Point location;
-	ArrayList<Item> hold;
-	int money;
-	int speed;
-	int health;
-	int attack;
-	public ImageIcon image;
+	private Point location;
+	private ArrayList<Item> hold;
+	private int money;
+	private int speed;
+	private int health;
+	private int attack;
+	private ImageIcon image;
 	
 	public Ship() {
 		

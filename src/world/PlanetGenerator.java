@@ -1,12 +1,13 @@
 package world;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.ImageIcon;
 
 public class PlanetGenerator {
 	
-	static ArrayList<ImageIcon> planetImages = new ArrayList<ImageIcon>();
+	static List<ImageIcon> planetImages = new ArrayList<ImageIcon>();
 	
 	static void init() {
 		planetImages.add(new ImageIcon("p1"));

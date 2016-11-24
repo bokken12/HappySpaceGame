@@ -20,14 +20,14 @@ public class MapDisplay extends JPanel {
 	
 	@Override
 	public void paintComponent(Graphics g) {
-		for(Planet p : myWorld.planets) {
+		for(Planet p : myWorld.getPlanets()) {
 			Point pos = convertPointToScreen(p.getLocation());
 			g.drawImage(p.getImage().getImage(), pos.x, pos.y, this);
 		}
 		
-		for(Ship s : myWorld.ships) {
+		for(Ship s : myWorld.getShips()) {
 			Point pos = convertPointToScreen(s.getLocation());
-			g.drawImage(s.image.getImage(), pos.x, pos.y, this);
+			g.drawImage(s.getImage().getImage(), pos.x, pos.y, this);
 		}
 	}
 	
