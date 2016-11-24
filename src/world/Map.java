@@ -1,13 +1,12 @@
-/**
- * 
- */
 package world;
 
-/**
- * @author joelmanning
- *
- */
-public class Map
-{
+import java.util.ArrayList;
 
+public class Map {
+
+	public ArrayList<Planet> planets;
+	
+	public Map() {
+		
+	}
 }
